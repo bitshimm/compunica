@@ -1,0 +1,129 @@
+body {
+    color: white;
+}
+
+.section-b {
+    background: black;
+}
+
+.main {
+    margin-top: 30px;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.main img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card {
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    width: 18rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    background: black;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+}
+
+.sidebar a:hover,
+footer a:hover {
+    color: gray;
+}
+
+.content {
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    padding: 20px;
+    text-indent: 20px;
+}
+
+.item-block {
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.nav-item a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+.nav-item a:after {
+    display: block;
+    content: "";
+    background-color: white;
+    height: 1px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.nav-item a:hover:after,
+.nav-item a:focus:after {
+    width: 100%;
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+footer {
+    padding-top: 30px;
+    color: white;
+}
+
+footer a {
+    padding-top: 30px;
+}
