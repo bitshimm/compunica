@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <header class="section-b">
+    <header class="section-b sticky-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img src="img/logo.png" style="width:3.5em"></a>
@@ -33,7 +33,7 @@
                             <a class="nav-link" href="/services">Продукты и услуги</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link" href="/projects">Проекты</a>
+                            <a class="nav-link" href="/clients">Клиенты</a>
                         </li>
                         <li class="nav-item m-2">
                             <a class="nav-link" href="/special">Спецпредложения</a>
@@ -52,7 +52,7 @@
     </header>
     <div class="main">
         <div class="container">
-            <div class="row">
+            <!--   <div class="row">
                 <div class="col-lg-3 col-sm-12 col-md-12">
                     <div class="sidebar section-b btn-group dropend">
                         <nav class="navbar flex-column">
@@ -81,10 +81,11 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="content">
-                        @yield('content')
+                        
                     </div>
                 </div>
-            </div>
+            </div>-->
+            @yield('content')
         </div>
     </div>
     <footer class="section-b">
@@ -96,7 +97,7 @@
                 </div>
 
                 <div class="col-6 col-md">
-                    <h5>Продукты и услуги</h5>
+                    <h6>Продукты и услуги</h6>
                     <ul class="list-unstyled text-small">
                         <li><a href="#" class="nav-link text-muted">Проектирование</a></li>
                         <li><a href="#" class="nav-link text-muted">Автоматизация, диспетчеризация, умный дом</a></li>
@@ -110,7 +111,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-md">
-                    <h5>О компании</h5>
+                    <h6>О компании</h6>
                     <ul class="list-unstyled text-small">
                         <li><a href="#" class="nav-link text-muted ">Виды деятельности</a></li>
                         <li><a href="#" class="nav-link text-muted">Паспорт предприятия</a></li>
@@ -118,11 +119,15 @@
                         <li><a href="#" class="nav-link text-muted">Вакансии</a></li>
                         <li><a href="#" class="nav-link text-muted">Мероприятия</a></li>
                     </ul>
-                    <h5><a href="#">Техническая поддержка</a></h5><br>
-                    <h5><a href="#">Спецпредложения</a></h5>
+                    <a href="#">
+                        <h6>Техническая поддержка</h6>
+                    </a>
+                    <a href="#">
+                        <h6>Спецпредложения</h6>
+                    </a>
                 </div>
                 <div class="col-6 col-md">
-                    <h5>Контакты</h5>
+                    <h6>Контакты</h6>
                     <ul class="list-unstyled text-small">
                         <li class="text-muted nav-link">Email:<br>compunica@mail.ru</li>
                         <li class="text-muted nav-link">Телефон:<br>8 (3532) 34-10-32</li>
