@@ -95,7 +95,6 @@
                     <i class="fas fa-globe" style="font-size:2em;"></i>
                     <h5 class="d-block mb-3">© 2021, Compunica.ru</h5>
                 </div>
-
                 <div class="col-6 col-md">
                     <h6>Продукты и услуги</h6>
                     <ul class="list-unstyled text-small">

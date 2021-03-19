@@ -3,6 +3,8 @@
 @section('title') Проекты @endsection
 
 @section('content')
+<h2 class="text-center">Наши Клиенты и выполненные проекты</h2>
+<hr>
 <div>
 <h3>Авиакомпании</h3>
 <div class="row">

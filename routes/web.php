@@ -28,8 +28,6 @@ Route::get('/login', function () {
     return view('login');
 })-> name('login');
 
-Route::post('/login/submit', function () {
-    return "okey";
-})-> name('login-form');
+Route::post('/services/submit', 'ApplicationController@submit')->name('services-form');
 
 
