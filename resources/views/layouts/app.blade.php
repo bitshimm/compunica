@@ -18,6 +18,15 @@
 
 <body>
     <header class="section-b sticky-top">
+        @if(Auth::check())
+        <nav class="navbar justify-content-center bg-success">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin')}}">Административный интерфейс</a>
+                </li>
+            </ul>
+        </nav>
+        @endif
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +35,7 @@
                 <a class="navbar-brand" href="/"><img src="img/logo.png" style="width:3.5em"></a>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
-                        <li class="nav-item active m-2">
+                        <li class="nav-item m-2">
                             <a class="nav-link" href="/">Главная</a>
                         </li>
                         <li class="nav-item m-2">
@@ -46,45 +55,26 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nav-item"><a class="nav-item nav-link text-center" href="/login"><i class="far fa-user"></i><br>LogIn</a></div>
+                <div class="nav-item">
+                    @guest
+                    <a class="nav-item nav-link text-center" href="{{route('login')}}"><i class="far fa-user"></i><br>Войти</a>
+                    @else
+                    <a class="nav-item nav-link text-center" href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <i class="far fa-user"></i><br>
+                        Выйти
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    @endguest
+                </div>
             </div>
         </nav>
     </header>
     <div class="main">
         <div class="container">
-            <!--   <div class="row">
-                <div class="col-lg-3 col-sm-12 col-md-12">
-                    <div class="sidebar section-b btn-group dropend">
-                        <nav class="navbar flex-column">
-                            <ul class="navbar-nav">
-                                <li><a class="nav-link" aria-current="page" href="#">Проектирование</a></li>
-                                <li><a class="nav-link" href="#">Автоматизация, диспетчеризация, умный дом</a></li>
-                                <li><a class="nav-link" href="#">СКС ЛВС ВОЛС</a></li>
-                                <li><a class="nav-link" href="#">Компьютеры серверы СХД</a></li>
-                                <li class="dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Системы безопасности
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Видеонаблюдение</a></li>
-                                        <li><a class="dropdown-item" href="#">Контроль доступа СКУД</a></li>
-                                        <li><a class="dropdown-item" href="#">Охранно-пожарная<br>сигнализация</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="nav-link" href="#">Видеосвязь, конверенцсвязь, АТС</a></li>
-                                <li><a class="nav-link" href="#">Электроснабжение, гарантийное электропитания</a></li>
-                                <li><a class="nav-link" href="#">Телеметрия, ЭХЗ</a></li>
-                                <li><a class="nav-link" href="#">Аутсорсинг</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="content">
-                        
-                    </div>
-                </div>
-            </div>-->
             @yield('content')
         </div>
     </div>
@@ -137,4 +127,5 @@
         </div>
     </footer>
 </body>
+
 </html>

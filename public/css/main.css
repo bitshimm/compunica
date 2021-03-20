@@ -107,3 +107,7 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+.login {
+    width: 80%;
+}

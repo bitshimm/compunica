@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('main');
 })-> name('main');
@@ -24,10 +26,15 @@ Route::get('/about', function () {
     return view('about');
 })-> name('about');
 
-Route::get('/login', function () {
+Route::post('/login', function () {
     return view('login');
 })-> name('login');
 
 Route::post('/services/submit', 'ApplicationController@submit')->name('services-form');
 
+Auth::routes();
+
+Route::get('/admin', function () {
+    return view('admin/admin');
+})-> name('admin')->middleware('auth');
 
