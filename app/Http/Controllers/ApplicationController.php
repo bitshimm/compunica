@@ -19,4 +19,7 @@ class ApplicationController extends Controller
         return redirect()->route('services')->with('success', 'Мы вам обязательно перезвоним');
 
     }
+    public function Data(){
+        return view('admin', ['application_data'=> Application::all()]);
+    }
 }

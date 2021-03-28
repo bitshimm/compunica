@@ -19,10 +19,10 @@
 <body>
     <header class="section-b sticky-top">
         @if(Auth::check())
-        <nav class="navbar justify-content-center bg-success">
+        <nav class="navbar justify-content-center bg-primary">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin')}}">Административный интерфейс</a>
+                    <a class="nav-link" href="{{route('admin-data')}}">Административный интерфейс</a>
                 </li>
             </ul>
         </nav>

@@ -3,6 +3,8 @@
 @section('title') Продукты и услуги @endsection
 
 @section('content')
+<h2 class="text-center">Продукты и услуги</h2>
+<hr>
 @if(session('success'))
 <div class="alert alert-success">
     {{ session('success')}}

@@ -26,15 +26,14 @@ Route::get('/about', function () {
     return view('about');
 })-> name('about');
 
-Route::post('/login', function () {
-    return view('login');
-})-> name('login');
-
 Route::post('/services/submit', 'ApplicationController@submit')->name('services-form');
 
 Auth::routes();
 
 Route::get('/admin', function () {
-    return view('admin/admin');
-})-> name('admin')->middleware('auth');
+    return view('admin');
+})-> name('admin-data')->middleware('auth');
+
+Route::get('/admin/data', 'ApplicationController@Data')->name('admin-data');
+Route::get('/admin/data', 'EmployeeController@Data')->name('admin-data');
 

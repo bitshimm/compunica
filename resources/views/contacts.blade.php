@@ -3,9 +3,10 @@
 @section('title') Контакты @endsection
 
 @section('content')
+<h2 class="text-center">Контакты</h2>
+<hr>
 <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-12">
-        <h3>Контакты</h3>
         <h5>Email:</h5>
         <p>compunica@mail.ru</p>
         <h5>Телефон</h5>
