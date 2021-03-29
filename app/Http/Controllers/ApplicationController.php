@@ -19,7 +19,8 @@ class ApplicationController extends Controller
         return redirect()->route('services')->with('success', 'Мы вам обязательно перезвоним');
 
     }
-    public function Data(){
-        return view('admin', ['application_data'=> Application::all()]);
+    public function Edit($id){
+        $application = new Application();
+        return view('edit-application', ['application_data'=>$application->find($id)]);
     }
 }

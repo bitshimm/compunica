@@ -34,6 +34,7 @@ Route::get('/admin', function () {
     return view('admin');
 })-> name('admin-data')->middleware('auth');
 
-Route::get('/admin/data', 'ApplicationController@Data')->name('admin-data');
-Route::get('/admin/data', 'EmployeeController@Data')->name('admin-data');
+Route::get('/admin/data', 'DataController@Data')->name('admin-data');
+Route::get('/admin/data/edit/{id}', 'ApplicationController@Edit')->name('edit-application');
+
 

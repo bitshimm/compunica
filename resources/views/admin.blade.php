@@ -21,6 +21,7 @@
               <th>Имя</th>
               <th>Email</th>
               <th>Номер телефона</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -30,6 +31,11 @@
               <td>{{$el->name}}</td>
               <td>{{$el->email}}</td>
               <td>{{$el->phone}}</td>
+              <td>
+              <a href="{{route('edit-application', $el->id)}}">
+              <button class="btn btn-primary">Редактировать</button>
+              </a>
+              </td>
             </tr>
             @endforeach
           </tbody>
@@ -40,7 +46,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Оборудование
+        Сотрудники
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -50,15 +56,21 @@
             <tr>
               <th>ID</th>
               <th>Имя</th>
+              <th>Фамилия</th>
+              <th>Отчество</th>
+              <th>Должность</th>
               <th>Email</th>
-              <th>Пароль</th>
+              <th>Номер телефона</th>
             </tr>
           </thead>
           <tbody>
-          @foreach($employee_data as $el)
+            @foreach($employee_data as $el)
             <tr>
               <th scope="row">{{$el->id}}</th>
               <td>{{$el->name}}</td>
+              <td>{{$el->surname}}</td>
+              <td>{{$el->patronymic}}</td>
+              <td>{{$el->position}}</td>
               <td>{{$el->email}}</td>
               <td>{{$el->phone}}</td>
             </tr>
@@ -75,7 +87,22 @@
       </button>
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      <div class="accordion-body">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>ID Заказа</th>
+              <th>Вид услуги</th>
+              <th>Стоимость</th>
+              <th>ID Сотрудника</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
