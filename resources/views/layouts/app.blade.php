@@ -81,46 +81,31 @@
     <footer class="section-b">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md">
-                    <i class="fas fa-globe" style="font-size:2em;"></i>
-                    <h5 class="d-block mb-3">© 2021, Compunica.ru</h5>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                        <h5 class="d-block text-center">© 2021, Compunica.ru</h5>
                 </div>
-                <div class="col-6 col-md">
-                    <h6>Продукты и услуги</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a href="#" class="nav-link text-muted">Проектирование</a></li>
-                        <li><a href="#" class="nav-link text-muted">Автоматизация, диспетчеризация, умный дом</a></li>
-                        <li><a href="#" class="nav-link text-muted">СКС ЛВС ВОЛС</a></li>
-                        <li><a href="#" class="nav-link text-muted">Компьютеры серверы СХД</a></li>
-                        <li><a href="#" class="nav-link text-muted">Системы безопасности</a></li>
-                        <li><a href="#" class="nav-link text-muted">Видеосвязь, конверенцсвязь, АТС</a></li>
-                        <li><a href="#" class="nav-link text-muted">Электроснабжение, гарантийное электропитания</a></li>
-                        <li><a href="#" class="nav-link text-muted">Телеметрия, ЭХЗ</a></li>
-                        <li><a href="#" class="nav-link text-muted">Аутсорсинг</a></li>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <ul class="list-unstyled text-small justify-content-center">
+                        <li><a href="/" class="nav-link">Главная</a></li>
+                        <li><a href="/services" class="nav-link">Продукты и услуги</a></li>
+                        <li><a href="/clients" class="nav-link">Клиенты</a></li>
+                        <li><a href="/special" class="nav-link">Спецпредложения</a></li>
+                        <li><a href="/contacts" class="nav-link">Контакты</a></li>
+                        <li><a href="/about" class="nav-link">О компании</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-md">
-                    <h6>О компании</h6>
+                <div class="col-lg-3 col-md-6 mb-3">
                     <ul class="list-unstyled text-small">
-                        <li><a href="#" class="nav-link text-muted ">Виды деятельности</a></li>
-                        <li><a href="#" class="nav-link text-muted">Паспорт предприятия</a></li>
-                        <li><a href="#" class="nav-link text-muted">Партнеры</a></li>
-                        <li><a href="#" class="nav-link text-muted">Вакансии</a></li>
-                        <li><a href="#" class="nav-link text-muted">Мероприятия</a></li>
+                        <li class=" nav-link">Email:<br>compunica@mail.ru</li>
+                        <li class="nav-link">Телефон:<br>8 (3532) 34-10-32</li>
+                        <li class="nav-link">Адрес:<br>460026, г. Оренбург, пр-кт Победы, д. 118, помещение 1.1.2</li>
                     </ul>
-                    <a href="#">
-                        <h6>Техническая поддержка</h6>
-                    </a>
-                    <a href="#">
-                        <h6>Спецпредложения</h6>
-                    </a>
                 </div>
-                <div class="col-6 col-md">
-                    <h6>Контакты</h6>
-                    <ul class="list-unstyled text-small">
-                        <li class="text-muted nav-link">Email:<br>compunica@mail.ru</li>
-                        <li class="text-muted nav-link">Телефон:<br>8 (3532) 34-10-32</li>
-                        <li class="text-muted nav-link">Адрес:<br>460026, г. Оренбург, пр-кт Победы, д. 118, помещение 1.1.2</li>
+                <div class="col-lg-3 col-md-12 mb-3">
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li class="nav-link"> <a href=""><i class="fab fa-vk" style="font-size:2em;"></i></a></li>
+                        <li class="nav-link"><a href=""><i class="fab fa-instagram" style="font-size:2em;"></i></a></li>
+                        <li class="nav-link"><a href=""><i class="fab fa-twitter" style="font-size:2em;"></i></a></li>
                     </ul>
                 </div>
             </div>

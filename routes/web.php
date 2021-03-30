@@ -58,3 +58,14 @@ Route::get('/admin/data/employee/add', 'EmployeeController@EmployeeAdd')->name('
 
 Route::post('/admin/data/employee/add','EmployeeController@EmployeeAddSubmit')->name('EmployeeAddSubmit');
 
+
+Route::get('/admin/data/service/edit/{id}', 'ServiceController@ServiceEdit')->name('serviceEdit');
+
+Route::post('/admin/data/service/edit/{id}','ServiceController@ServiceUpdateSubmit')->name('ServiceUpdateSubmit');
+
+Route::get('/admin/data/service/delete/{id}','ServiceController@ServiceDeleteSubmit')->name('ServiceDeleteSubmit');
+
+Route::get('/admin/data/service/add', 'ServiceController@ServiceAdd')->name('serviceAdd');
+
+Route::post('/admin/data/service/add','ServiceController@ServiceAddSubmit')->name('ServiceAddSubmit');
+

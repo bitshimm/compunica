@@ -112,31 +112,7 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Заказы
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        <table class="table">
-          <thead class="table-dark">
-            <tr>
-              <th>ID</th>
-              <th>ID Заказа</th>
-              <th>Вид услуги</th>
-              <th>Стоимость</th>
-              <th>ID Сотрудника</th>
-            </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
 @endsection

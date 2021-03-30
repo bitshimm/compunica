@@ -18,6 +18,12 @@ body {
     color: black;
 }
 
+.email-box {
+    border-radius: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
 .main img {
     border-radius: 10px;
     width: 100%;
