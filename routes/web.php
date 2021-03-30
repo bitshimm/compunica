@@ -42,9 +42,19 @@ Route::post('/admin/data/application/edit/{id}','ApplicationController@Applicati
 
 Route::get('/admin/data/application/delete/{id}','ApplicationController@ApplicationDeleteSubmit')->name('ApplicationDeleteSubmit');
 
+Route::get('/admin/data/application/add', 'ApplicationController@ApplicationAdd')->name('applicationAdd');
+
+Route::post('/admin/data/application/add','ApplicationController@ApplicationAddSubmit')->name('ApplicationAddSubmit');
+
+
+
 Route::get('/admin/data/employee/edit/{id}', 'EmployeeController@EmployeeEdit')->name('employeeEdit');
 
 Route::post('/admin/data/employee/edit/{id}','EmployeeController@EmployeeUpdateSubmit')->name('EmployeeUpdateSubmit');
 
 Route::get('/admin/data/employee/delete/{id}','EmployeeController@EmployeeDeleteSubmit')->name('EmployeeDeleteSubmit');
+
+Route::get('/admin/data/employee/add', 'EmployeeController@EmployeeAdd')->name('employeeAdd');
+
+Route::post('/admin/data/employee/add','EmployeeController@EmployeeAddSubmit')->name('EmployeeAddSubmit');
 

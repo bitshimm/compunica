@@ -37,8 +37,27 @@ class ApplicationController extends Controller
         return redirect()->route('admin-data', $id)->with('success', 'Запись изменена');
 
     }
+
     public function ApplicationDeleteSubmit($id){
         Application::find($id)->delete();
         return redirect()->route('admin-data')->with('success', 'Запись удалена');
+    }
+
+    public function ApplicationAdd(Request $req)
+    {
+        $application = new Application();
+        return view('applicationAdd');
+    }
+
+    public function ApplicationAddSubmit(Request $req){
+        $application = new Application();
+        $application->name = $req->input('name');
+        $application->email = $req->input('email');
+        $application->phone = $req->input('phone');
+
+        $application->save();
+
+        return redirect()->route('admin-data')->with('success', 'Запись добавлена');
+
     }
 }

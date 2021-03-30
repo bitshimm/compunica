@@ -31,4 +31,25 @@ class EmployeeController extends Controller
         Employee::find($id)->delete();
         return redirect()->route('admin-data')->with('success', 'Запись удалена');
     }
+
+    public function EmployeeAdd(Request $req)
+    {
+        $employee = new Employee();
+        return view('employeeAdd');
+    }
+
+    public function EmployeeAddSubmit(Request $req){
+        $employee = new Employee();
+        $employee->name = $req->input('name');
+        $employee->surname = $req->input('surname');
+        $employee->patronymic = $req->input('patronymic');
+        $employee->position = $req->input('position');
+        $employee->email = $req->input('email');
+        $employee->phone = $req->input('phone');
+
+        $employee->save();
+
+        return redirect()->route('admin-data')->with('success', 'Запись добавлена');
+
+    }
 }
