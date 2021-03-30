@@ -7,7 +7,28 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function Data(){
-        return view('admin', ['employee_data'=> Employee::all()]);
+    public function EmployeeEdit($id)
+    {
+        $employee = new Employee();
+        return view('employeeEdit', ['employee_data' => $employee->find($id)]);
+    }
+
+    public function EmployeeUpdateSubmit($id, Request $req){
+        $employee = Employee::find($id);
+        $employee->name = $req->input('name');
+        $employee->name = $req->input('surname');
+        $employee->name = $req->input('patronymic');
+        $employee->name = $req->input('position');
+        $employee->email = $req->input('email');
+        $employee->phone = $req->input('phone');
+
+        $employee->save();
+
+        return redirect()->route('admin-data', $id)->with('success', 'Запись изменена');
+
+    }
+    public function EmployeeDeleteSubmit($id){
+        Employee::find($id)->delete();
+        return redirect()->route('admin-data')->with('success', 'Запись удалена');
     }
 }
