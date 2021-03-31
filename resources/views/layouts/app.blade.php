@@ -19,7 +19,7 @@
 <body>
     <header class="section-b sticky-top">
         @if(Auth::check())
-        <nav class="navbar justify-content-center bg-primary">
+        <nav class="navbar justify-content-center section-b">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin-data')}}">Административный интерфейс</a>
