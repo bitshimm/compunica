@@ -12,12 +12,12 @@
                 <input name="name" type="name" class="form-control" id="name" value="{{$service_data->name}}">
             </div>
             <div class="mb-3">
-                <label for="surname">Стоимость</label>
-                <input name="surname" type="surname" class="form-control" id="surname" value="{{$service_data->cost}}">
+                <label for="cost">Стоимость</label>
+                <input name="cost" type="surname" class="form-control" id="cost" value="{{$service_data->cost}}">
             </div>
             <div class="mb-3">
-                <label for="patronymic">Описание</label>
-                <input name="patronymic" type="patronymic" class="form-control" id="patronymic" value="{{$service_data->description}}">
+                <label for="description">Описание</label>
+                <input name="description" type="description" class="form-control" id="description" value="{{$service_data->description}}">
             </div>
         </div>
         <div class="modal-footer">

@@ -69,3 +69,14 @@ Route::get('/admin/data/service/add', 'ServiceController@ServiceAdd')->name('ser
 
 Route::post('/admin/data/service/add','ServiceController@ServiceAddSubmit')->name('ServiceAddSubmit');
 
+
+Route::get('/admin/data/order/edit/{id}', 'OrderController@OrderEdit')->name('orderEdit');
+
+Route::post('/admin/data/order/edit/{id}','OrderController@OrderUpdateSubmit')->name('OrderUpdateSubmit');
+
+Route::get('/admin/data/order/delete/{id}','OrderController@OrderDeleteSubmit')->name('OrderDeleteSubmit');
+
+Route::get('/admin/data/order/add', 'OrderController@OrderAdd')->name('orderAdd');
+
+Route::post('/admin/data/order/add','OrderController@OrderAddSubmit')->name('OrderAddSubmit');
+

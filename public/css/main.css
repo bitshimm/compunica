@@ -30,15 +30,17 @@ body {
     width: 100%;
 }
 
-.main-blade .main-section{
+.main-blade .main-section {
     border-radius: 10px;
     border: 5px dotted gray;
     padding: 15px;
     min-height: 100%;
 }
-.main-blade .col-lg-4{
+
+.main-blade .col-lg-4 {
     margin-bottom: 15px;
 }
+
 .sidebar {
     background: black;
     border-radius: 10px;

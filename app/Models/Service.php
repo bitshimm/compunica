@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class Service extends Model
 {
     public function orders()
     {
-        return $this->hasMany('App\Models\Order', 'employee_id');
+        return $this->hasMany('App\Models\Order', 'service_id');
     }
 }

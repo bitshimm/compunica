@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
-
+    public function orders()
+    {
+        return $this->hasMany('App\Models\Order', 'application_id');
+    }
 }

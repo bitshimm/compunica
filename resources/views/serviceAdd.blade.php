@@ -12,11 +12,11 @@
                 <input name="name" type="name" class="form-control" id="name">
             </div>
             <div class="mb-3">
-                <label for="surname">Стоимость</label>
-                <input name="surname" type="surname" class="form-control" id="cost">
+                <label for="cost">Стоимость</label>
+                <input name="cost" type="cost" class="form-control" id="cost">
             </div>
             <div class="mb-3">
-                <label for="patronymic">Описание</label>
+                <label for="description">Описание</label>
                 <textarea name="description" type="description" class="form-control" rows="3" id="exampleFormControlTextarea1"></textarea>
             </div>
         </div>

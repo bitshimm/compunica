@@ -9,6 +9,9 @@
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script defer src="/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/main.css" />
@@ -82,7 +85,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-12 mb-3">
-                        <h5 class="d-block text-center">© 2021, Compunica.ru</h5>
+                    <h5 class="d-block text-center">© 2021, Compunica.ru</h5>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
                     <ul class="list-unstyled text-small justify-content-center">

@@ -15,15 +15,13 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('application_id')->unsigned();
-            $table->string('type_of_service');
-            $table->integer('cost');
-            $table->bigInteger('employee_id')->unsigned();
+            $table->bigInteger('application_id')->nullable();
+            $table->string('name');
+            $table->string('surname');
+            $table->string('patronymic');
+            $table->string('service_id');
+            $table->bigInteger('employee_id')->nullable();
             $table->timestamps();
-        });
-        Schema::table('orders', function(Blueprint $table){
-            $table->foreign('application_id')->references('applications')->on('id')->onDelete('cascade');
-            $table->foreign('employee_id')->references('employees')->on('id')->onDelete('cascade');
         });
     }
 
