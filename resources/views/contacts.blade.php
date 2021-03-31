@@ -22,7 +22,7 @@
 </div>
 <hr>
 <div class="row email-box">
-    <div class="col-12 pt-3" style="background-color: black; color:white;">
+    <div class="col-12 pt-3 bg-dark" style="color:white;">
         <h4>Написать нам</h4>
         <p>Мы внимательно читаем каждое сообщение. Ответим в течении одного рабочего дня с момента отправки</p>
     </div>

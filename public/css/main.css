@@ -16,10 +16,11 @@ body {
     margin-top: 30px;
     border-radius: 10px;
     color: black;
+    min-height: 100%;
 }
 
 .email-box {
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid black;
     overflow: hidden;
 }
@@ -29,6 +30,15 @@ body {
     width: 100%;
 }
 
+.main-blade .main-section{
+    border-radius: 10px;
+    border: 5px dotted gray;
+    padding: 15px;
+    min-height: 100%;
+}
+.main-blade .col-lg-4{
+    margin-bottom: 15px;
+}
 .sidebar {
     background: black;
     border-radius: 10px;

@@ -12,7 +12,7 @@ class DataController extends Controller
     public function Data()
     {
         return view(
-            'admin',
+            'layouts/admin',
             ['employee_data' => Employee::all()],
             ['application_data' => Application::all()]
         );
