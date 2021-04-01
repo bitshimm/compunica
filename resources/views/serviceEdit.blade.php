@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="description">Описание</label>
-                <input name="description" type="description" class="form-control" id="description" value="{{$service_data->description}}">
+                <textarea name="description" type="description" class="form-control" rows="3" id="exampleFormControlTextarea1">{{$service_data->description}}</textarea>
             </div>
         </div>
         <div class="modal-footer">

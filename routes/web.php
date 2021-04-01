@@ -80,3 +80,13 @@ Route::get('/admin/data/order/add', 'OrderController@OrderAdd')->name('orderAdd'
 
 Route::post('/admin/data/order/add','OrderController@OrderAddSubmit')->name('OrderAddSubmit');
 
+
+Route::get('/admin/data/message/edit/{id}', 'MessageController@MessageEdit')->name('messageEdit');
+
+Route::post('/admin/data/message/edit/{id}','MessageController@MessageUpdateSubmit')->name('MessageUpdateSubmit');
+
+Route::get('/admin/data/message/delete/{id}','MessageController@MessageDeleteSubmit')->name('MessageDeleteSubmit');
+
+Route::get('/admin/data/message/add', 'MessageController@MessageAdd')->name('messageAdd');
+
+Route::post('/admin/data/message/add','MessageController@MessageAddSubmit')->name('MessageAddSubmit');

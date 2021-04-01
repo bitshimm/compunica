@@ -17,6 +17,9 @@
   <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-controls="multiCollapseExample4" data-parent="#multiCollapseExample4">
     Заказы
   </button>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-controls="multiCollapseExample5" data-parent="#multiCollapseExample5">
+    Сообщения
+  </button>
 </div>
 </div>
 
@@ -201,6 +204,55 @@
           </td>
           <td>
             <a href="{{route('OrderDeleteSubmit', $el->id)}}">
+              <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+            </a>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+  <hr>
+</div>
+
+<div class="collapse multi-collapse" id="multiCollapseExample5">
+  <hr>
+  <h3>Сообщения</h3>
+  <div class="mb-3">
+    <a href="{{route('messageAdd')}}">
+      <button class="btn btn-primary">Добавить</i></button>
+    </a>
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Имя</th>
+          <th>Компания</th>
+          <th>Email</th>
+          <th>Телефон</th>
+          <th>Комментарий</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($message as $el)
+        <tr>
+          <th scope="row">{{$el->id}}</th>
+          <td>{{$el->name}}</td>
+          <td>{{$el->company}}</td>
+          <td>{{$el->email}}</td>
+          <td>{{$el->phone}}</td>
+          <td>{{$el->comment}}</td>
+          <td>
+            <a href="{{route('messageEdit', $el->id)}}">
+              <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>
+            </a>
+          </td>
+          <td>
+            <a href="{{route('MessageDeleteSubmit', $el->id)}}">
               <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
             </a>
           </td>

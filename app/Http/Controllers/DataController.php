@@ -7,6 +7,7 @@ use App\Models\Application;
 use App\Models\Employee;
 use App\Models\Service;
 use App\Models\Order;
+use App\Models\Message;
 
 class DataController extends Controller
 {
@@ -15,9 +16,11 @@ class DataController extends Controller
         $application = Application::all();
         $employee = Employee::all();
         $service = Service::all();
+        $message = Message::all();
         $order = Order::all();
+       
         return view(
             'layouts/admin',
-            compact('application','employee','service','order'));
+            compact('application','employee','service','order','message'));
     }
 }

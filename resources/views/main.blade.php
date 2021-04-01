@@ -4,10 +4,8 @@
 
 @section('content')
 <div style="position: relative;">
-    <img src="/img/main_banner2.jpg" alt="">
-    <div>
-        <h1 class="text-center" style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color:white; text-shadow: 1px 1px 2px black, 0 0 1em black;">Инновационное производственное предприятие</h1>
-    </div>
+    <img src="/img/main_banner3.jpg" alt="">
+    
 </div>
 
 <hr>
