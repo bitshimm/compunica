@@ -28,6 +28,7 @@ Route::get('/about', function () {
 
 Route::post('/services/submit', 'ApplicationController@submit')->name('services-form');
 
+Route::post('/contacts/submit', 'MessageController@submit')->name('contacts-form');
 Auth::routes();
 
 Route::get('/admin', function () {

@@ -7,6 +7,19 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+    public function submit(Request $req){
+        $message = new Message();
+        $message->name = $req->input('name');
+        $message->company = $req->input('company');
+        $message->email = $req->input('email');
+        $message->phone = $req->input('phone');
+        $message->comment = $req->input('comment');
+
+        $message->save();
+
+        return redirect()->route('contacts')->with('success', 'Ваше сообщение отправлено');
+
+    }
     public function MessageEdit($id)
     {
         $message = new Message();
