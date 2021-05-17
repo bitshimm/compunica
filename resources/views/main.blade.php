@@ -5,7 +5,7 @@
 @section('content')
 <div style="position: relative;">
     <img src="/img/main_banner3.jpg" alt="">
-    
+
 </div>
 
 <hr>
@@ -60,6 +60,19 @@
                                 </div>
                                 <div class="mb-3">
                                     <input name="name" type="name" class="form-control" id="name" placeholder="Имя">
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name">
+                                        <option selected disabled>Выберите услугу</option>
+                                        <option value="Проектирование">Проектирование</option>
+                                        <option value="Автоматизация. Диспетчеризация. ЭХЗ">Автоматизация. Диспетчеризация. ЭХЗ</option>
+                                        <option value="Компьютеры. Серверы. СХД">Компьютеры. Серверы. СХД</option>
+                                        <option value="Видеонаблюдение">Видеонаблюдение</option>
+                                        <option value="Системы контроля и управления доступом">Системы контроля и управления доступом</option>
+                                        <option value="Охранно-пожарная сигнализация">Охранно-пожарная сигнализация</option>
+                                        <option value="Видеосвязь, конференцсвязь, АТС">Видеосвязь, конференцсвязь, АТС</option>
+                                        <option value="Электроснабжение, гарантийное электропитание">Электроснабжение, гарантийное электропитание</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="modal-footer">

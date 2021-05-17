@@ -18,6 +18,7 @@ class CreateApplicationsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->char('phone', 11);
+            $table->string('service_name');
             $table->timestamps();
         });
     }

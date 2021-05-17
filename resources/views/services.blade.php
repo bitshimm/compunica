@@ -33,6 +33,19 @@
                     <div class="mb-3">
                         <input name="name" type="name" class="form-control" id="name" placeholder="Имя">
                     </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name">
+                            <option selected disabled>Выберите услугу</option>
+                            <option value="Проектирование">Проектирование</option>
+                            <option value="Автоматизация. Диспетчеризация. ЭХЗ">Автоматизация. Диспетчеризация. ЭХЗ</option>
+                            <option value="Компьютеры. Серверы. СХД">Компьютеры. Серверы. СХД</option>
+                            <option value="Видеонаблюдение">Видеонаблюдение</option>
+                            <option value="Системы контроля и управления доступом">Системы контроля и управления доступом</option>
+                            <option value="Охранно-пожарная сигнализация">Охранно-пожарная сигнализация</option>
+                            <option value="Видеосвязь, конференцсвязь, АТС">Видеосвязь, конференцсвязь, АТС</option>
+                            <option value="Электроснабжение, гарантийное электропитание">Электроснабжение, гарантийное электропитание</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-warning">Отправить</button>
@@ -241,7 +254,7 @@
         <p>Мы предлагаем надежные решения электрообеспечения коммерческих, производственных и государственных предприятий с помощью систем гарантированного и бесперебойного электропитания:</p>
     </div>
     <div class="col-12">
-    <img src="/img/electrosnabjenie.jpg" alt="">
+        <img src="/img/electrosnabjenie.jpg" alt="">
     </div>
 </div>
 @endsection

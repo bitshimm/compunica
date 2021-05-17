@@ -48,9 +48,6 @@
                             <a class="nav-link" href="/clients">Клиенты</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link" href="/special">Спецпредложения</a>
-                        </li>
-                        <li class="nav-item m-2">
                             <a class="nav-link" href="/contacts">Контакты</a>
                         </li>
                         <li class="nav-item m-2">
@@ -92,7 +89,6 @@
                         <li><a href="/" class="nav-link">Главная</a></li>
                         <li><a href="/services" class="nav-link">Продукты и услуги</a></li>
                         <li><a href="/clients" class="nav-link">Клиенты</a></li>
-                        <li><a href="/special" class="nav-link">Спецпредложения</a></li>
                         <li><a href="/contacts" class="nav-link">Контакты</a></li>
                         <li><a href="/about" class="nav-link">О компании</a></li>
                     </ul>

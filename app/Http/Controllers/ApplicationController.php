@@ -13,6 +13,7 @@ class ApplicationController extends Controller
         $application->name = $req->input('name');
         $application->email = $req->input('email');
         $application->phone = $req->input('phone');
+        $application->service_name = $req->input('service_name');
 
         $application->save();
 
@@ -31,6 +32,7 @@ class ApplicationController extends Controller
         $application->name = $req->input('name');
         $application->email = $req->input('email');
         $application->phone = $req->input('phone');
+        $application->service_name = $req->input('service_name');
 
         $application->save();
 
@@ -54,6 +56,7 @@ class ApplicationController extends Controller
         $application->name = $req->input('name');
         $application->email = $req->input('email');
         $application->phone = $req->input('phone');
+        $application->service_name = $req->input('service_name');
 
         $application->save();
 
