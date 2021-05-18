@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('title') Административная панель @endsection
 @section('content')
-<h2 class="text-center">Административная панель</h2>
-<hr>
+
 <nav>
   <div class="nav nav-tabs justify-content-center mb-3" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-applications-tab" data-bs-toggle="tab" data-bs-target="#nav-applications" type="button" role="tab" aria-controls="nav-applications" aria-selected="true">Заявки</button>
@@ -220,6 +219,7 @@
             <th>Email</th>
             <th>Телефон</th>
             <th>Комментарий</th>
+            <th>Дата</th>
             <th></th>
             <th></th>
           </tr>
@@ -233,6 +233,7 @@
             <td>{{$el->email}}</td>
             <td>{{$el->phone}}</td>
             <td>{{$el->comment}}</td>
+            <td>{{$el->created_at->format('d/m/Y')}}</td>
             <td>
               <a href="{{route('messageEdit', $el->id)}}">
                 <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>
