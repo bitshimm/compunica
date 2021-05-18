@@ -29,6 +29,7 @@
             <th>Email</th>
             <th>Номер телефона</th>
             <th>Название услуги</th>
+            <th>Дата</th>
             <th></th>
             <th></th>
           </tr>
@@ -41,6 +42,7 @@
             <td>{{$el->email}}</td>
             <td>{{$el->phone}}</td>
             <td>{{$el->service_name}}</td>
+            <td>{{$el->created_at->format('d/m/Y')}}</td>
             <td>
               <a href="{{route('applicationEdit', $el->id)}}">
                 <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>
@@ -168,6 +170,7 @@
             <th>Отчество</th>
             <th>ID Услуги</th>
             <th>ID Сотрудника</th>
+            <th>Дата</th>
             <th></th>
             <th></th>
           </tr>
@@ -182,6 +185,7 @@
             <td>{{$el->patronymic}}</td>
             <td>{{$el->service_id}}</td>
             <td>{{$el->employee_id}}</td>
+            <td>{{$el->created_at->format('d/m/Y')}}</td>
             <td>
               <a href="{{route('orderEdit', $el->id)}}">
                 <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>

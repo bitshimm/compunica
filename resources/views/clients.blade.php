@@ -11,7 +11,7 @@
         <div class="col-lg-5 col-sm-12">
             <div class="row">
                 <div class="col-5 card">
-                    <a href="http://www.orenair.ru/">
+                    <a href="http://www.orenair.ru/" target="_blank">
                         <div class="card-body">
                             <img src="/img/logo_orenair.png" alt="">
                             <hr>
@@ -44,7 +44,7 @@
         <div class="col-lg-5 col-sm-12">
             <div class="row">
                 <div class="col-5 card">
-                    <a href="http://orenpirogova.ru/">
+                    <a href="http://orenpirogova.ru/" target="_blank">
                         <div class="card-body">
                             <img src="/img/logo_pirogova.png" alt="">
                             <hr>
@@ -77,7 +77,7 @@
             <div class="col-lg-5 col-sm-12">
                 <div class="row">
                     <div class="col-5 card">
-                        <a href="https://ospu.ru/">
+                        <a href="https://ospu.ru/" target="_blank">
                             <div class="card-body">
                                 <img src="/img/logo_ogpu.jpg" alt="">
                                 <hr>
@@ -111,7 +111,7 @@
             <div class="col-lg-5 col-sm-12">
                 <div class="row">
                     <div class="col-5 card">
-                        <a href="https://www.volma.ru/">
+                        <a href="https://www.volma.ru/" target="_blank">
                             <div class="card-body">
                                 <img src="/img/logo_volma.png" alt="">
                                 <hr>
@@ -145,7 +145,7 @@
             <div class="col-lg-5 col-sm-12">
                 <div class="row">
                     <div class="col-5 card">
-                        <a href="https://www.pa-strela.com/index.php">
+                        <a href="https://www.pa-strela.com/index.php" target="_blank">
                             <div class="card-body">
                                 <img src="/img/logo_strela.png" alt="">
                                 <hr>
@@ -178,7 +178,7 @@
             <div class="col-lg-5 col-sm-12">
                 <div class="row">
                     <div class="col-5 card">
-                        <a href="https://www.pa-strela.com/index.php">
+                        <a href="https://www.pa-strela.com/index.php" target="_blank">
                             <div class="card-body">
                                 <img src="/img/logo_tplus.png" alt="">
                                 <hr>

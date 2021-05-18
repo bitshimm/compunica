@@ -7,8 +7,8 @@ body {
 
 .section-b {
     background-color: rgba(0, 0, 0, .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
     color: white;
 }
 
@@ -41,25 +41,8 @@ body {
     margin-bottom: 15px;
 }
 
-.sidebar {
-    background: black;
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.sidebar ul {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 .dropdown-menu {
     border-radius: 10px;
-}
-
-.sidebar a:hover,
-footer a:hover {
-    color: gray;
 }
 
 .content a {
