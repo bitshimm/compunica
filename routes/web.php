@@ -6,10 +6,6 @@ Route::get('/', function () {
     return view('main');
 })->name('main');
 
-Route::get('/services', function () {
-    return view('services');
-})->name('services');
-
 Route::get('/clients', function () {
     return view('clients');
 })->name('clients');
@@ -25,7 +21,12 @@ Route::get('/about', function () {
 Route::post('/services/submit', 'ApplicationController@submit')->name('services-form');
 
 Route::post('/contacts/submit', 'MessageController@submit')->name('contacts-form');
+
 Auth::routes();
+
+Route::get('/services', 'ServiceController@Services')->name('services');
+
+Route::get('/services/submit', 'ServiceController@ServiceSubmit')->name('services-submit');
 
 Route::get('/admin', function () {
     return view('admin');

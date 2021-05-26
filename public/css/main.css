@@ -116,3 +116,8 @@ footer a {
 .login {
     width: 80%;
 }
+
+.service_add {
+    box-shadow: 0 0 10px gray;
+    border-radius: 15px;
+}

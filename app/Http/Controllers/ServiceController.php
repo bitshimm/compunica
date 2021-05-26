@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+    public function Services()
+    {
+        $service = Service::all();
+        return view(
+            'services',
+            compact('service'));
+    }
     public function ServiceEdit($id)
     {
         $service = new Service();
@@ -38,12 +45,22 @@ class ServiceController extends Controller
     public function ServiceAddSubmit(Request $req){
         $service = new Service();
         $service->name = $req->input('name');
-        $service->cost = $req->input('cost');
         $service->description = $req->input('description');
+        $service->image = $req->input['img_filename']('serviceImage');
 
         $service->save();
 
         return redirect()->route('admin-data')->with('success', 'Запись добавлена');
+
+    }
+    public function ServiceSubmit(Request $req){
+        $req->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+        $imageName = time().'.'.$req->image->extension();
+        $req->image->move(public_path('uploads'), $imageName);
+
+        return redirect()->route('services')->with('success', 'Услуга добавлена');
 
     }
 }

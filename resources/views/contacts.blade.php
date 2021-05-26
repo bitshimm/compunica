@@ -33,19 +33,19 @@
         </div>
         <hr>
         <div class="col-lg-3">
-            <input name="name" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя">
+            <input name="name" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" required>
         </div>
         <div class="col-lg-3">
             <input name="company" type="company" class="form-control" id="exampleFormControlInput1" placeholder="Компания">
         </div>
         <div class="col-lg-3">
-            <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+            <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" required>
         </div>
         <div class="col-lg-3">
             <input name="phone" type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Телефон">
         </div>
         <div class="col-12 mt-3 mb-3">
-            <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Ваш комментарий"></textarea>
+            <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Ваш комментарий" required></textarea>
         </div>
         <div class="col-12">
             <button type="submit" class="btn btn-dark mb-3">Отправить</button>

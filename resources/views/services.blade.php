@@ -21,29 +21,32 @@
                 <h5 class="modal-title" id="exampleModalLabel">Введите данные</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('services-form')}}" method="post">
+            <form action="{{ route('ServiceAddSubmit')}}" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">
-                        <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                        <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                     <div class="mb-3">
-                        <input name="phone" type="phone" class="form-control" id="phone" placeholder="Телефон">
+                        <input name="phone" type="phone" class="form-control" id="phone" placeholder="Телефон" required>
                     </div>
                     <div class="mb-3">
-                        <input name="name" type="name" class="form-control" id="name" placeholder="Имя">
+                        <input name="name" type="name" class="form-control" id="name" placeholder="Имя" required>
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name">
+                        <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name" required>
                             <option selected disabled>Выберите услугу</option>
-                            <option value="Проектирование">Проектирование</option>
+                            <!--<option value="Проектирование">Проектирование</option>
                             <option value="Автоматизация. Диспетчеризация. ЭХЗ">Автоматизация. Диспетчеризация. ЭХЗ</option>
                             <option value="Компьютеры. Серверы. СХД">Компьютеры. Серверы. СХД</option>
                             <option value="Видеонаблюдение">Видеонаблюдение</option>
                             <option value="Системы контроля и управления доступом">Системы контроля и управления доступом</option>
                             <option value="Охранно-пожарная сигнализация">Охранно-пожарная сигнализация</option>
                             <option value="Видеосвязь, конференцсвязь, АТС">Видеосвязь, конференцсвязь, АТС</option>
-                            <option value="Электроснабжение, гарантийное электропитание">Электроснабжение, гарантийное электропитание</option>
+                            <option value="Электроснабжение, гарантийное электропитание">Электроснабжение, гарантийное электропитание</option> -->
+                            @foreach($service as $el)
+                            <option value="{{$el->name}}">{{$el->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -55,6 +58,34 @@
     </div>
 </div>
 <hr>
+@if(Auth::check())
+<form action="{{ route('services-submit')}}" method="post" enctype="multipart/form-data">
+    @csrf
+    <div class="row service_add p-3 mb-3">
+        <h4>Добавление услуги</h4>
+        <div class="col-md-8 col-sm-12">
+
+            <div class="mb-3">
+                <label for="name">Наименование</label>
+                <input name="name" type="name" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="description">Описание</label>
+                <textarea name="description" type="description" class="form-control" rows="7" id="exampleFormControlTextarea1"></textarea>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 service_add_img mb-3">
+            <div class="mb-3">
+                <label for="image" class="form-label m-0">Картинка к услуге</label>
+                <input class="form-control" type="file" id="image">
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-dark" style="width: 100px;">Добавить</button>
+        </div>
+    </div>
+</form>
+@endif
 <div class="row">
     <h4>Проектирование</h4>
     <div class="col-md-8 col-sm-12">

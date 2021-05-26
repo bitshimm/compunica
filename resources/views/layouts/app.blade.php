@@ -42,7 +42,7 @@
                             <a class="nav-link" href="/">Главная</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link" href="/services">Продукты и услуги</a>
+                            <a class="nav-link" href="{{route('services')}}">Продукты и услуги</a>
                         </li>
                         <li class="nav-item m-2">
                             <a class="nav-link" href="/clients">Клиенты</a>

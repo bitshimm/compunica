@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('title') Административная панель @endsection
 @section('content')
-
+@if(session('success'))
+<div class="alert alert-success">
+    {{ session('success')}}
+</div>
+@endif
 <nav>
   <div class="nav nav-tabs justify-content-center mb-3" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-applications-tab" data-bs-toggle="tab" data-bs-target="#nav-applications" type="button" role="tab" aria-controls="nav-applications" aria-selected="true">Заявки</button>
