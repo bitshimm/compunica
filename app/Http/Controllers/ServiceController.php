@@ -59,6 +59,10 @@ class ServiceController extends Controller
         ]);
         $imageName = time().'.'.$req->image->extension();
         $req->image->move(public_path('uploads'), $imageName);
+        // $service = new Service();
+        // $service->name = $req->input('name');
+        // $service->description = $req->input('description');
+        // $service->image = $req->input['img_filename']('serviceImage');
 
         return redirect()->route('services')->with('success', 'Услуга добавлена');
 
