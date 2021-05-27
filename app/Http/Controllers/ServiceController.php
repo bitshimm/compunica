@@ -54,16 +54,11 @@ class ServiceController extends Controller
 
     }
     public function ServiceSubmit(Request $req){
-        $req->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-        ]);
-        $imageName = time().'.'.$req->image->extension();
-        $req->image->move(public_path('uploads'), $imageName);
-        // $service = new Service();
-        // $service->name = $req->input('name');
-        // $service->description = $req->input('description');
-        // $service->image = $req->input['img_filename']('serviceImage');
-
+        $service = new Service();
+        $image = $req->file('image')->storePublicly('uploads', 'public');
+        $service->name = $req->input('name');
+        $service->description = $req->input('description');
+        $service->path_to_file = $req->input('image');
         return redirect()->route('services')->with('success', 'Услуга добавлена');
 
     }
