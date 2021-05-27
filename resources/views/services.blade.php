@@ -36,7 +36,7 @@
                     <div class="mb-3">
                         <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name" required>
                             <option selected disabled>Выберите услугу</option>
-                            <!--<option value="Проектирование">Проектирование</option>
+                            <!-- <option value="Проектирование">Проектирование</option>
                             <option value="Автоматизация. Диспетчеризация. ЭХЗ">Автоматизация. Диспетчеризация. ЭХЗ</option>
                             <option value="Компьютеры. Серверы. СХД">Компьютеры. Серверы. СХД</option>
                             <option value="Видеонаблюдение">Видеонаблюдение</option>
@@ -63,7 +63,7 @@
     @csrf
     <div class="row service_add p-3 mb-3">
         <h4>Добавление услуги</h4>
-        <!-- <div class="col-md-8 col-sm-12">
+        <div class="col-md-8 col-sm-12">
 
             <div class="mb-3">
                 <label for="name">Наименование</label>
@@ -73,7 +73,7 @@
                 <label for="description">Описание</label>
                 <textarea name="description" type="description" class="form-control" rows="7" id="exampleFormControlTextarea1"></textarea>
             </div>
-        </div> -->
+        </div>
         <div class="col-md-4 col-sm-12 service_add_img mb-3">
             <div class="mb-3">
                 <label for="image" class="form-label m-0">Картинка к услуге</label>
@@ -86,6 +86,18 @@
     </div>
 </form>
 @endif
+@foreach($service as $el)
+<div class="row">
+    <h4>{{$el->name}}</h4>
+    <div class="col-md-8 col-sm-12">
+        {!! $el->description !!}
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <img src="/storage/{{$el->path_to_file}}" class="img-fluid" alt="">
+    </div>
+</div>
+<hr>
+@endforeach
 <div class="row">
     <h4>Проектирование</h4>
     <div class="col-md-8 col-sm-12">
