@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Order;
+use App\Models\Application;
+use App\Models\Service;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 
@@ -39,13 +42,17 @@ class OrderController extends Controller
     }
 
     public function OrderAddSubmit(Request $req){
+        $service = Service::all();
+        $employee = Employee::all();
+        $application = Application::all();
         $order = new Order();
-        $order->application_id = $req->input('application_id');
         $order->name = $req->input('name');
         $order->surname = $req->input('surname');
         $order->patronymic = $req->input('patronymic');
-        $order->service_id = $req->input('service_id');
-        $order->employee_id = $req->input('employee_id');
+        $application->application_id = $req->input('application_id');
+        $application->application_id = $req->input('application_name');
+        $service->service_id = $req->input('service_name');
+        $employee->employee_id = $req->input('employee_name');
 
         $order->save();
 

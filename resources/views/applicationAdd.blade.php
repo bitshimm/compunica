@@ -20,8 +20,12 @@
                 <input name="name" type="name" class="form-control" id="name">
             </div>
             <div class="mb-3">
-                <label for="service_name">Наименование услуги</label>
-                <input name="service_name" type="service_name" class="form-control" id="service_name">
+                <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name" required>
+                    <option selected disabled>Выберите услугу</option>
+                    @foreach($service as $el)
+                    <option value="{{$el->name}}">{{$el->name}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="modal-footer">

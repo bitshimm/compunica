@@ -8,6 +8,6 @@ class Employee extends Model
 {
     public function orders()
     {
-        return $this->hasMany('App\Models\Order', 'employee_id');
+        return $this->hasMany('App\Models\Order');
     }
 }

@@ -1,29 +1,32 @@
 @extends('layouts.app')
 
-@section('title') Редактирование сотрудников @endsection
+@section('title') Добавление Услуги @endsection
 
 @section('content')
-<div class="row">
-    <form action="{{ route('ServiceAddSubmit')}}" method="post" class="col-lg-4 col-md-7 col-sm-12">
-        @csrf
-        <div class="modal-body">
+<form action="{{ route('ServiceAddSubmit')}}" method="post" enctype="multipart/form-data">
+    @csrf
+    <div class="row service_add p-3 mb-3">
+        <h4>Добавление услуги</h4>
+        <div class="col-md-8 col-sm-12">
+
             <div class="mb-3">
                 <label for="name">Наименование</label>
                 <input name="name" type="name" class="form-control" id="name">
             </div>
             <div class="mb-3">
-                <label for="cost">Стоимость</label>
-                <input name="cost" type="cost" class="form-control" id="cost">
-            </div>
-            <div class="mb-3">
                 <label for="description">Описание</label>
-                <textarea name="description" type="description" class="form-control" rows="3" id="exampleFormControlTextarea1"></textarea>
+                <textarea name="description" type="description" class="form-control" rows="7" id="exampleFormControlTextarea1"></textarea>
             </div>
         </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-dark">Добавить</button>
+        <div class="col-md-4 col-sm-12 service_add_img mb-3">
+            <div class="mb-3">
+                <label for="image" class="form-label m-0">Картинка к услуге</label>
+                <input class="form-control" type="file" id="image" name="image">
+            </div>
         </div>
-    </form>
-</div>
-
+        <div class="col-12">
+            <button type="submit" class="btn btn-dark" style="width: 100px;">Добавить</button>
+        </div>
+    </div>
+</form>
 @endsection

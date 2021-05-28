@@ -125,8 +125,8 @@
           <tr>
             <th>ID</th>
             <th>Наименование</th>
-            <th>Стоимость</th>
             <th>Описание</th>
+            <th>Изображение</th>
             <th></th>
             <th></th>
           </tr>
@@ -136,8 +136,8 @@
           <tr>
             <th scope="row">{{$el->id}}</th>
             <td>{{$el->name}}</td>
-            <td>{{$el->cost}}</td>
             <td>{{$el->description}}</td>
+            <td><img src="/storage/{{$el->path_to_file}}" alt="" style="width: 50px;"></td>
             <td>
               <a href="{{route('serviceEdit', $el->id)}}">
                 <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>

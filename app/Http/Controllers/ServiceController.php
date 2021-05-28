@@ -10,6 +10,7 @@ class ServiceController extends Controller
     public function Services()
     {
         $service = Service::all();
+        $service = $service->sortByDesc('id');
         return view(
             'services',
             compact('service'));
@@ -23,8 +24,8 @@ class ServiceController extends Controller
     public function ServiceUpdateSubmit($id, Request $req){
         $service = Service::find($id);
         $service->name = $req->input('name');
-        $service->cost = $req->input('cost');
         $service->description = $req->input('description');
+        $service->path_to_file = $req->file('image')->storePublicly('uploads', 'public');
 
         $service->save();
 
@@ -46,7 +47,7 @@ class ServiceController extends Controller
         $service = new Service();
         $service->name = $req->input('name');
         $service->description = $req->input('description');
-        $service->image = $req->input['img_filename']('serviceImage');
+        $service->path_to_file = $req->file('image')->storePublicly('uploads', 'public');
 
         $service->save();
 

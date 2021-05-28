@@ -19,8 +19,12 @@ class CreateOrdersTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->string('service_id');
+            $table->string('application_phone');
+            $table->bigInteger('service_id')->nullable();
+            $table->string('service_name')->nullable();
             $table->bigInteger('employee_id')->nullable();
+            $table->string('employee_name')->nullable();
+            $table->string('employee_position')->nullable();
             $table->timestamps();
         });
     }

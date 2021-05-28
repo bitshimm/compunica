@@ -8,6 +8,6 @@ class Application extends Model
 {
     public function orders()
     {
-        return $this->hasMany('App\Models\Order', 'application_id');
+        return $this->hasOne('App\Models\Order');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\Application;
+use App\Models\Service;
 
 class ApplicationController extends Controller
 {
@@ -47,8 +48,9 @@ class ApplicationController extends Controller
 
     public function ApplicationAdd(Request $req)
     {
+        $service = Service::all();
         $application = new Application();
-        return view('applicationAdd');
+        return view('applicationAdd', compact('service'));
     }
 
     public function ApplicationAddSubmit(Request $req){

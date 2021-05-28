@@ -36,14 +36,6 @@
                     <div class="mb-3">
                         <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name" required>
                             <option selected disabled>Выберите услугу</option>
-                            <!-- <option value="Проектирование">Проектирование</option>
-                            <option value="Автоматизация. Диспетчеризация. ЭХЗ">Автоматизация. Диспетчеризация. ЭХЗ</option>
-                            <option value="Компьютеры. Серверы. СХД">Компьютеры. Серверы. СХД</option>
-                            <option value="Видеонаблюдение">Видеонаблюдение</option>
-                            <option value="Системы контроля и управления доступом">Системы контроля и управления доступом</option>
-                            <option value="Охранно-пожарная сигнализация">Охранно-пожарная сигнализация</option>
-                            <option value="Видеосвязь, конференцсвязь, АТС">Видеосвязь, конференцсвязь, АТС</option>
-                            <option value="Электроснабжение, гарантийное электропитание">Электроснабжение, гарантийное электропитание</option> -->
                             @foreach($service as $el)
                             <option value="{{$el->name}}">{{$el->name}}</option>
                             @endforeach
@@ -87,16 +79,16 @@
 </form>
 @endif
 @foreach($service as $el)
-<div class="row">
+<div class="row service_block p-3 mb-3 mt-3">
     <h4>{{$el->name}}</h4>
     <div class="col-md-8 col-sm-12">
         {!! $el->description !!}
     </div>
-    <div class="col-md-4 col-sm-12">
+    <div class="col-md-4 col-sm-12 mb-3">
         <img src="/storage/{{$el->path_to_file}}" class="img-fluid" alt="">
     </div>
 </div>
-<hr>
+
 @endforeach
 <div class="row">
     <h4>Проектирование</h4>
@@ -136,7 +128,6 @@
         <img src="/img/avtomatizaciya.png" alt="">
     </div>
 </div>
-<hr>
 <div class="row">
     <h4>Компьютеры. Серверы. СХД</h4>
     <div class="col-md-8 col-sm-12">
