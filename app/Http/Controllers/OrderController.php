@@ -18,12 +18,10 @@ class OrderController extends Controller
 
     public function OrderUpdateSubmit($id, Request $req){
         $order = Order::find($id);
-        $order->application_id = $req->input('application_id');
-        $order->name = $req->input('name');
+        $order->application = $req->input('application');
         $order->surname = $req->input('surname');
         $order->patronymic = $req->input('patronymic');
-        $order->service_id = $req->input('service_id');
-        $order->employee_id = $req->input('employee_id');
+        $order->employee = $req->input('employee');
 
         $order->save();
 
@@ -37,22 +35,18 @@ class OrderController extends Controller
 
     public function OrderAdd(Request $req)
     {
+        $application = Application::all();
+        $employee = Employee::all();
         $order = new Order();
-        return view('orderAdd');
+        return view('orderAdd', compact('application', 'employee'));
     }
 
     public function OrderAddSubmit(Request $req){
-        $service = Service::all();
-        $employee = Employee::all();
-        $application = Application::all();
         $order = new Order();
-        $order->name = $req->input('name');
+        $order->application = $req->input('application');
         $order->surname = $req->input('surname');
         $order->patronymic = $req->input('patronymic');
-        $application->application_id = $req->input('application_id');
-        $application->application_id = $req->input('application_name');
-        $service->service_id = $req->input('service_name');
-        $employee->employee_id = $req->input('employee_name');
+        $order->employee = $req->input('employee');
 
         $order->save();
 

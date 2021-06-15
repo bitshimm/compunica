@@ -19,7 +19,6 @@ class EmployeeController extends Controller
         $employee->surname = $req->input('surname');
         $employee->patronymic = $req->input('patronymic');
         $employee->position = $req->input('position');
-        $employee->email = $req->input('email');
         $employee->phone = $req->input('phone');
 
         $employee->save();
@@ -44,7 +43,6 @@ class EmployeeController extends Controller
         $employee->surname = $req->input('surname');
         $employee->patronymic = $req->input('patronymic');
         $employee->position = $req->input('position');
-        $employee->email = $req->input('email');
         $employee->phone = $req->input('phone');
 
         $employee->save();

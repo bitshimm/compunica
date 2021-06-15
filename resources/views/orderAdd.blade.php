@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') Редактирование сотрудников @endsection
+@section('title') Добавление заказа @endsection
 
 @section('content')
 <div class="row">
@@ -8,12 +8,17 @@
         @csrf
         <div class="modal-body">
             <div class="mb-3">
-                <label for="application_id">ID Заявки</label>
-                <input name="application_id" type="application_id" class="form-control" id="application_id">
-            </div>
-            <div class="mb-3">
-                <label for="name">Имя</label>
-                <input name="name" type="name" class="form-control" id="name">
+                <label for="application">Заявка</label>
+                <select class="form-select" aria-label="Default select example" name="application" type="application" id="application" required>
+                    <option selected disabled>Выберите заявку</option>
+                    @foreach($application as $el)
+                    <option>
+                        {{$el->name}}<br>
+                        {{$el->phone}}<br>
+                        {{$el->email}}
+                    </option>
+                    @endforeach
+                </select>
             </div>
             <div class="mb-3">
                 <label for="surname">Фамилия</label>
@@ -24,12 +29,19 @@
                 <input name="patronymic" type="patronymic" class="form-control" id="patronymic">
             </div>
             <div class="mb-3">
-                <label for="service_id">ID Услуги</label>
-                <input name="service_id" type="service_id" class="form-control" id="service_id">
-            </div>
-            <div class="mb-3">
-                <label for="employee_id">ID Сотрудника</label>
-                <input name="employee_id" type="employee_id" class="form-control" id="employee_id">
+                <label for="employee">Сотрудник</label>
+                <select class="form-select" aria-label="Default select example" name="employee" type="application" id="employee" required>
+                    <option selected disabled>Выберите Сотрудника</option>
+                    @foreach($employee as $el)
+                    <option>
+                        {{$el->surname}}<br>
+                        {{$el->name}}<br>
+                        {{$el->patronymic}}<br>
+                        {{$el->position}}<br>
+                        {{$el->phone}}
+                    </option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="modal-footer">

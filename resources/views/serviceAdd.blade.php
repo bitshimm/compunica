@@ -11,17 +11,20 @@
 
             <div class="mb-3">
                 <label for="name">Наименование</label>
-                <input name="name" type="name" class="form-control" id="name">
+                <input name="name" type="name" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
                 <label for="description">Описание</label>
-                <textarea name="description" type="description" class="form-control" rows="7" id="exampleFormControlTextarea1"></textarea>
+                <textarea name="description" type="description" class="form-control" rows="7" id="exampleFormControlTextarea1" required></textarea>
             </div>
         </div>
         <div class="col-md-4 col-sm-12 service_add_img mb-3">
             <div class="mb-3">
                 <label for="image" class="form-label m-0">Картинка к услуге</label>
-                <input class="form-control" type="file" id="image" name="image">
+                <input class="form-control" type="file" id="image" name="image" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
             </div>
         </div>
         <div class="col-12">

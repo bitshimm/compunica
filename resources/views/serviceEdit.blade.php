@@ -19,14 +19,12 @@
             </div>
         </div>
         <div class="col-md-4 col-sm-12 service_add_img mb-3">
-            <div class="mb-3">
+            <div class="mb-3 mt-3">
                 <img src="/storage/{{$service_data->path_to_file}}" alt="">
-                <label for="image" class="form-label m-0">Картинка к услуге</label>
-                <input class="form-control" type="file" id="image" name="image" value="{{$service_data->path_to_file}}">
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-dark" style="width: 100px;">Добавить</button>
+            <button type="submit" class="btn btn-dark" style="width: 100px;">Изменить</button>
         </div>
     </div>
 </form>

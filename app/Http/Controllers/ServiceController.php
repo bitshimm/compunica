@@ -25,7 +25,6 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service->name = $req->input('name');
         $service->description = $req->input('description');
-        $service->path_to_file = $req->file('image')->storePublicly('uploads', 'public');
 
         $service->save();
 

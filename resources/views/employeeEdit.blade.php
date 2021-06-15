@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') Редактирование сотрудников @endsection
+@section('title') Редактирование сотрудника @endsection
 
 @section('content')
 <div class="row">
@@ -22,10 +22,6 @@
             <div class="mb-3">
                 <label for="position">Должность</label>
                 <input name="position" type="position" class="form-control" id="position" value="{{$employee_data->position}}">
-            </div>
-            <div class="mb-3">
-                <label for="email">Email</label>
-                <input name="email" type="email" class="form-control" id="email" value="{{$employee_data->email}}">
             </div>
             <div class="mb-3">
                 <label for="phone">Номер телефона</label>

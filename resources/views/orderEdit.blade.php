@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') Редактирование сотрудников @endsection
+@section('title') Редактирование заказа @endsection
 
 @section('content')
 <div class="row">
@@ -8,12 +8,8 @@
         @csrf
         <div class="modal-body">
             <div class="mb-3">
-                <label for="application_id">ID Заявки</label>
-                <input name="application_id" type="application_id" class="form-control" id="application_id" value="{{$order_data->application_id}}">
-            </div>
-            <div class="mb-3">
-                <label for="name">Имя</label>
-                <input name="name" type="name" class="form-control" id="name" value="{{$order_data->name}}">
+                <label for="application">Заявка</label>
+                <input name="application" type="application" class="form-control" id="application" value="{{$order_data->application}}">
             </div>
             <div class="mb-3">
                 <label for="surname">Фамилия</label>
@@ -24,16 +20,12 @@
                 <input name="patronymic" type="patronymic" class="form-control" id="patronymic" value="{{$order_data->patronymic}}">
             </div>
             <div class="mb-3">
-                <label for="service_id">ID Услуги</label>
-                <input name="service_id" type="service_id" class="form-control" id="service_id" value="{{$order_data->service_id}}">
-            </div>
-            <div class="mb-3">
-                <label for="employee_id">ID Сотрудника</label>
-                <input name="employee_id" type="employee_id" class="form-control" id="employee_id" value="{{$order_data->employee_id}}">
+                <label for="employee">Сотрудник</label>
+                <input name="employee" type="employee" class="form-control" id="employee" value="{{$order_data->employee}}">
             </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-dark">Изменить</button>
+            <button type="submit" class="btn btn-dark">Добавить</button>
         </div>
     </form>
 </div>

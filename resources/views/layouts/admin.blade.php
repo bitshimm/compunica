@@ -75,11 +75,10 @@
         <thead class="table-dark">
           <tr>
             <th>ID</th>
-            <th>Имя</th>
             <th>Фамилия</th>
+            <th>Имя</th>
             <th>Отчество</th>
             <th>Должность</th>
-            <th>Email</th>
             <th>Номер телефона</th>
             <th></th>
             <th></th>
@@ -89,11 +88,10 @@
           @foreach($employee as $el)
           <tr>
             <th scope="row">{{$el->id}}</th>
-            <td>{{$el->name}}</td>
             <td>{{$el->surname}}</td>
+            <td>{{$el->name}}</td>
             <td>{{$el->patronymic}}</td>
             <td>{{$el->position}}</td>
-            <td>{{$el->email}}</td>
             <td>{{$el->phone}}</td>
             <td>
               <a href="{{route('employeeEdit', $el->id)}}">
@@ -137,7 +135,7 @@
             <th scope="row">{{$el->id}}</th>
             <td>{{$el->name}}</td>
             <td>{{$el->description}}</td>
-            <td><img src="/storage/{{$el->path_to_file}}" alt="" style="width: 50px;"></td>
+            <td class="text-center"><img src="/storage/{{$el->path_to_file}}" alt="" style="width: 50px;"></td>
             <td>
               <a href="{{route('serviceEdit', $el->id)}}">
                 <button class="btn btn-primary"><i class="fas fa-cogs"></i></button>
@@ -167,12 +165,10 @@
         <thead class="table-dark">
           <tr>
             <th>ID</th>
-            <th>ID Заявки</th>
-            <th>Имя</th>
+            <th>Заявка</th>
             <th>Фамилия</th>
             <th>Отчество</th>
-            <th>ID Услуги</th>
-            <th>ID Сотрудника</th>
+            <th>Сотрудник</th>
             <th>Дата</th>
             <th></th>
             <th></th>
@@ -182,12 +178,10 @@
           @foreach($order as $el)
           <tr>
             <th scope="row">{{$el->id}}</th>
-            <td>{{$el->application_id}}</td>
-            <td>{{$el->name}}</td>
+            <td>{{$el->application}}</td>
             <td>{{$el->surname}}</td>
             <td>{{$el->patronymic}}</td>
-            <td>{{$el->service_id}}</td>
-            <td>{{$el->employee_id}}</td>
+            <td>{{$el->employee}}</td>
             <td>{{$el->created_at->format('d/m/Y')}}</td>
             <td>
               <a href="{{route('orderEdit', $el->id)}}">

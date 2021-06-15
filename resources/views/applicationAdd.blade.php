@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') Редактирование заявки @endsection
+@section('title') Добавление заявки @endsection
 
 @section('content')
 <div class="row">
@@ -9,15 +9,15 @@
         <div class="modal-body">
             <div class="mb-3">
                 <label for="email">Email</label>
-                <input name="email" type="email" class="form-control" id="email">
+                <input name="email" type="email" class="form-control" id="email" required>
             </div>
             <div class="mb-3">
                 <label for="phone">Номер телефона</label>
-                <input name="phone" type="phone" class="form-control" id="phone">
+                <input name="phone" type="phone" class="form-control" id="phone" required>
             </div>
             <div class="mb-3">
                 <label for="name">Имя</label>
-                <input name="name" type="name" class="form-control" id="name">
+                <input name="name" type="name" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
                 <select class="form-select" aria-label="Default select example" name="service_name" type="service_name" id="service_name" required>
