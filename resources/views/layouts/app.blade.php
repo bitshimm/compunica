@@ -8,11 +8,14 @@
     <title>@yield('title')</title>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/bootstrap-sortable.js"></script>
     <script defer src="/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-sortable.css">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -110,6 +113,37 @@
             </div>
         </div>
     </footer>
+    <script>
+        $('.table-filters input').on('input', function() {
+            filterTable($(this).parents('table'));
+        });
+
+        function filterTable($table) {
+            var $filters = $table.find('.table-filters td');
+            var $rows = $table.find('.table-data');
+            $rows.each(function(rowIndex) {
+                var valid = true;
+                $(this).find('td').each(function(colIndex) {
+                    if ($filters.eq(colIndex).find('input').val()) {
+                        if ($(this).html().toLowerCase().indexOf(
+                                $filters.eq(colIndex).find('input').val().toLowerCase()) == -1) {
+                            valid = valid && false;
+                        }
+                    }
+                });
+                if (valid === true) {
+                    $(this).css('display', '');
+                } else {
+                    $(this).css('display', 'none');
+                }
+            });
+        }
+    </script>
+    <script>
+        $("#checkAll").click(function() {
+            $('input:checkbox').not(this).prop('checked', this.checked);
+        });
+    </script>
 </body>
 
 </html>

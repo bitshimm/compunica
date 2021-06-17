@@ -3,7 +3,7 @@
 @section('content')
 @if(session('success'))
 <div class="alert alert-success">
-    {{ session('success')}}
+  {{ session('success')}}
 </div>
 @endif
 <nav>
@@ -24,7 +24,7 @@
       </a>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table sortable">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
@@ -37,10 +37,32 @@
             <th></th>
           </tr>
         </thead>
+        <thead>
+          <tr class="table-filters">
+            <td></td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
         <tbody>
           @foreach($application as $el)
-          <tr>
-            <th scope="row">{{$el->id}}</th>
+          <tr class="table-data">
+            <td>{{$el->id}}</td>
             <td>{{$el->name}}</td>
             <td>{{$el->email}}</td>
             <td>{{$el->phone}}</td>
@@ -71,7 +93,7 @@
       </a>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table sortable">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
@@ -84,10 +106,32 @@
             <th></th>
           </tr>
         </thead>
+        <thead>
+          <tr class="table-filters">
+            <td></td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
         <tbody>
           @foreach($employee as $el)
-          <tr>
-            <th scope="row">{{$el->id}}</th>
+          <tr class="table-data">
+            <td>{{$el->id}}</td>
             <td>{{$el->surname}}</td>
             <td>{{$el->name}}</td>
             <td>{{$el->patronymic}}</td>
@@ -118,7 +162,7 @@
       </a>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table sortable">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
@@ -129,10 +173,24 @@
             <th></th>
           </tr>
         </thead>
+        <thead>
+          <tr class="table-filters">
+            <td></td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
         <tbody>
           @foreach($service as $el)
-          <tr>
-            <th scope="row">{{$el->id}}</th>
+          <tr class="table-data">
+            <td>{{$el->id}}</td>
             <td>{{$el->name}}</td>
             <td>{{$el->description}}</td>
             <td class="text-center"><img src="/storage/{{$el->path_to_file}}" alt="" style="width: 50px;"></td>
@@ -161,7 +219,7 @@
       </a>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table sortable">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
@@ -174,10 +232,32 @@
             <th></th>
           </tr>
         </thead>
+        <thead>
+          <tr class="table-filters">
+            <td></td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
         <tbody>
           @foreach($order as $el)
-          <tr>
-            <th scope="row">{{$el->id}}</th>
+          <tr class="table-data">
+            <td>{{$el->id}}</td>
             <td>{{$el->application}}</td>
             <td>{{$el->surname}}</td>
             <td>{{$el->patronymic}}</td>
@@ -208,7 +288,7 @@
       </a>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table sortable">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
@@ -222,10 +302,35 @@
             <th></th>
           </tr>
         </thead>
+        <thead>
+          <tr class="table-filters">
+            <td></td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
         <tbody>
           @foreach($message as $el)
-          <tr>
-            <th scope="row">{{$el->id}}</th>
+          <tr class="table-data">
+            <td>{{$el->id}}</td>
             <td>{{$el->name}}</td>
             <td>{{$el->company}}</td>
             <td>{{$el->email}}</td>
