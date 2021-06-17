@@ -3,6 +3,11 @@
 @section('title') Контакты @endsection
 
 @section('content')
+@if(session('success'))
+<div class="alert alert-success">
+  {{ session('success')}}
+</div>
+@endif
 <h2 class="text-center">Контакты</h2>
 <hr>
 <div class="row">

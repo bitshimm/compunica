@@ -4,10 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailClass;
 
 class MessageController extends Controller
 {
     public function submit(Request $req){
+        $name = $req->input('name');
+        $company = $req->input('company');
+        $email = $req->input('email');
+        $phone = $req->input('phone');
+        $comment = $req->input('comment');
+        Mail::to('itbshimm@gmail.com')->send(new MailClass($name, $company, $email, $phone, $comment));
+
         $message = new Message();
         $message->name = $req->input('name');
         $message->company = $req->input('company');
@@ -16,7 +25,6 @@ class MessageController extends Controller
         $message->comment = $req->input('comment');
 
         $message->save();
-
         return redirect()->route('contacts')->with('success', 'Ваше сообщение отправлено');
 
     }
